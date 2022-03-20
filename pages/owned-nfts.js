@@ -1,4 +1,4 @@
-/* pages/my-nfts.js */
+/* pages/owned-nfts.js */
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import marketplaceController from '../controllers/MarketplaceController'
