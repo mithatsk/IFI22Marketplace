@@ -28,6 +28,8 @@ Open a new tab for the next commands and leave this one running.
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
+If you get an error saying "Cannot read properties of undefined (reading 'length')" This is due to IPFS returning server error for sending too many requests. Try waiting a while and reduce the number of rooms in the data/uzh-rooms.json if this keeps hapenning.
+
 
 4. Install meta mask extension chrome (https://metamask.io/download/).
 

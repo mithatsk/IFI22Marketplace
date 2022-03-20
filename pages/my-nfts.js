@@ -13,7 +13,7 @@ export default function MyAssets() {
   }, [])
 
   async function loadNFTs() {
-    const items = await marketplaceController.fetchPersonalNFTs()
+    const items = await marketplaceController.fetchOwnedNFTs()
     setNfts(items)
     setLoadingState('loaded') 
   }

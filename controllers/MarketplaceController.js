@@ -36,7 +36,8 @@ async function fetchAllNFTs() {
         owner: i.owner,
         image: meta.data.image,
         name: meta.data.name,
-        description: meta.data.description,
+        type: meta.data.type,
+        address: meta.data.address
       }
       return item
     }))
@@ -44,9 +45,9 @@ async function fetchAllNFTs() {
     return items
 }
 
-async function fetchPersonalNFTs() {
+async function fetchOwnedNFTs() {
     const signedContract = await getSignedContract()
-    const data = await signedContract.fetchPersonalNFTs()
+    const data = await signedContract.fetchOwnedNFTs()
 
     const items = await Promise.all(data.map(async i => {
       const tokenURI = await signedContract.tokenURI(i.tokenId)
@@ -58,7 +59,9 @@ async function fetchPersonalNFTs() {
         seller: i.seller,
         owner: i.owner,
         image: meta.data.image,
-        tokenURI
+        tokenURI,
+        type: meta.data.type,
+        address: meta.data.address
       }
       return item
     }))
@@ -68,7 +71,7 @@ async function fetchPersonalNFTs() {
 
 async function fetchListedNFTs() {
     const signedContract = await getSignedContract()
-    const data = await signedContract.fetchItemsListed()
+    const data = await signedContract.fetchListedItems()
 
     const items = await Promise.all(data.map(async i => {
       const tokenUri = await signedContract.tokenURI(i.tokenId)
@@ -80,6 +83,8 @@ async function fetchListedNFTs() {
         seller: i.seller,
         owner: i.owner,
         image: meta.data.image,
+        type: meta.data.type,
+        address: meta.data.address
       }
       return item
     }))
@@ -101,7 +106,7 @@ async function sellNFT(id, price) {
 
 async function buyNFT(nft) {
     const signedContract = await getSignedContract()
-    const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')   
+    const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')
     const transaction = await signedContract.createMarketSale(nft.tokenId, {
       value: price
     })
@@ -119,7 +124,7 @@ async function createNFT(url, price) {
 
 module.exports = {
     fetchAllNFTs,
-    fetchPersonalNFTs,
+    fetchOwnedNFTs,
     fetchListedNFTs,
     sellNFT,
     buyNFT,

@@ -1,0 +1,62 @@
+[
+    {
+        "name": "BIN-0-K.02",
+        "type": "lecture hall",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/lecture-hall.jpg"
+    },
+    {
+        "name": "BIN-0-K.11",
+        "type": "seminar room",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    },
+    {
+        "name": "BIN-0-K.12",
+        "type": "seminar room",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    },
+    {
+        "name": "BIN-0-K.13",
+        "type": "seminar room",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    },
+    {
+        "name": "BIN-1-B.01",
+        "type": "lecture hall",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/lecture-hall.jpg"
+    },
+    {
+        "name": "BIN-1-D.22",
+        "type": "seminar room",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    },
+    {
+        "name": "BIN-2-A.01",
+        "type": "seminar room",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    },
+    {
+        "name": "BIN-2-A.06",
+        "type": "seminar room",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    },
+    {
+        "name": "BIN-2-A.10",
+        "type": "seminar room",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    },
+    {
+        "name": "BIN-0-K.02",
+        "type": "lecture hall",
+        "address": "Binzmühlestrasse 14 8050 Zurich",
+        "image": "http://localhost:3000/static/seminar-room.jpeg"
+    }
+]

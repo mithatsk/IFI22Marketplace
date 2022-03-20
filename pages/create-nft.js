@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { create as ipfsHttpClient } from 'ipfs-http-client'
+import { create as ipfsHttpClient, urlSource } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
 import marketplaceController from '../controllers/MarketplaceController'
 
@@ -15,7 +15,7 @@ export default function CreateItem() {
     const file = e.target.files[0]
     try {
       const added = await client.add(
-        file,
+        urlSource('http://localhost:3000/static/lecture-hall.jpg'),
         {
           progress: (prog) => console.log(`received: ${prog}`)
         }
@@ -26,6 +26,7 @@ export default function CreateItem() {
       console.log('Error uploading file: ', error)
     }  
   }
+
   async function uploadToIPFS() {
     const { name, description, price } = formInput
     if (!name || !description || !price || !fileUrl) return
