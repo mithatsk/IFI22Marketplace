@@ -15,7 +15,7 @@ export default function Home() {
 
   function filterByValue(array, string) {
     return array.filter(o =>
-        Object.keys(o).some(k => o["name"].toString().toLowerCase().includes(string.toLowerCase())));
+        Object.keys(o).some(k => o['name'].toString().toLowerCase().includes(string.toLowerCase())));
   }
 
   useEffect(() => {
