@@ -7,12 +7,12 @@ export default function Home() {
   const [filteredNFTs, setFilteredNFTs] = useState([])
   const [loadingState, setLoadingState] = useState('not-loaded')
 
-  const onChange = useCallback((event) => {
+  function onChange(event) {
     const query = event.target.value
     const items = items = filterByValue(nfts, query)
     console.log(items)
     setFilteredNFTs(items)
-  }, [])
+  }
 
   function filterByValue(array, string) {
     return array.filter(o =>
