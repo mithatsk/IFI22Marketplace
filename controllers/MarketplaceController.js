@@ -60,8 +60,7 @@ async function fetchOwnedNFTs() {
         owner: i.owner,
         image: meta.data.image,
         tokenURI,
-        type: meta.data.type,
-        address: meta.data.address
+        name: meta.data.name
       }
       return item
     }))
@@ -83,8 +82,7 @@ async function fetchListedNFTs() {
         seller: i.seller,
         owner: i.owner,
         image: meta.data.image,
-        type: meta.data.type,
-        address: meta.data.address
+        name: meta.data.name
       }
       return item
     }))

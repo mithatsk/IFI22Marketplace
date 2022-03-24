@@ -10,6 +10,7 @@ export default function Home() {
   const onChange = useCallback((event) => {
     const query = event.target.value
     const items = items = filterByValue(nfts, query)
+    console.log(items)
     setFilteredNFTs(items)
   }, [])
 
@@ -52,14 +53,14 @@ export default function Home() {
               <div key={i} className="border shadow rounded-xl overflow-hidden">
                 <img src={nft.image} />
                 <div className="p-4">
-                  <p style={{ height: '64px' }} className="text-2xl font-semibold">{nft.name}</p>
-                  <div style={{ height: '70px', overflow: 'hidden' }}>
+                  <p style={{ height: '48px' }} className="text-2xl font-semibold">{nft.name}</p>
+                  <div style={{ height: '60px', overflow: 'hidden' }}>
                     <p className="text-gray-400">{nft.type}</p>
                     <p className="text-gray-400">{nft.address}</p>
                   </div>
                 </div>
-                <div className="p-4 bg-slate-800">
-                  <p className="text-2xl font-bold text-white">{nft.price} ETH</p>
+                <div className="p-4 bg-indigo-900">
+                  <p className="text-3xl font-bold text-white">{nft.price} ETH</p>
                   <button className="mt-4 w-full bg-blue-500 text-white font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy</button>
                 </div>
               </div>
