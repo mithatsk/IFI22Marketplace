@@ -26,6 +26,11 @@ const MyApp = ({ Component, pageProps }) => {
         </div>
       </nav>
       <Component {...pageProps} />
+      <footer className="text-center text-white bg-indigo-700">
+        <div className="text-center p-4 bg-indigo-900 mt-4">
+        @2022 Marketplace for UZH Rooms
+        </div>
+      </footer>
     </div>
   )
 }
