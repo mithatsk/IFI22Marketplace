@@ -111,20 +111,10 @@ async function buyNFT(nft) {
     await transaction.wait()
 }
 
-async function createNFT(url, price) {
-    const signedContract = await getSignedContract()
-    const etherPrice = ethers.utils.parseUnits(price, 'ether')
-    let listingPrice = await signedContract.getListingPrice()
-    listingPrice = listingPrice.toString()
-    let transaction = await signedContract.createToken(url, etherPrice, { value: listingPrice })
-    await transaction.wait()
-}
-
 module.exports = {
     fetchAllNFTs,
     fetchOwnedNFTs,
     fetchListedNFTs,
     sellNFT,
-    buyNFT,
-    createNFT
+    buyNFT
 }
